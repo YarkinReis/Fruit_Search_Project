@@ -1,46 +1,97 @@
 * {
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
   }
   
   :focus {
+    outline: rgba(0,0,0,0.3) auto 8px;
    /* TODO */
   }
   
   body {
+    background: linear-gradient(
+    90deg,
+    rgba(245, 112, 4, 0.85) 30%,  
+    rgba(245, 167, 4, 0.85) 80%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
     /* TODO */
   }
   
   input {
+    width: 100%;
+ font-size: 20px;
+
+ height: 40px;
+ width: 400px;
+ border-radius: 10px;
    /* TODO */
   }
   
   .search-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%,-30px);
    /* TODO */
   }
   .search-container input,
   .search-container .suggestions {
+    position: relative;
+    max-height: 20vw;
     /* TODO */
   }
   .search-container input {
+    background-color: rgba(255,255,255,0.4);
    /* TODO */
   }
   .search-container .suggestions {
+    cursor: pointer;
+  position: absolute;
+  max-height: 180px;
+  overflow-y: auto;
+  left: 0;
+  right: 0;
+  top: 100%;
      /* TODO */
   }
   
   ul {
+    max-height: 35%;
+  padding: 0;
+  margin: 0;
     /* TODO */
   }
   ul.has-suggestions {
+    overflow-y: auto;
     /* TODO */
   }
   ul li {
+    list-style-type: none;
     /* TODO */
   }
   ul li:hover {
+    background-color: rgba(0,0,0,0.1);
+  font-size: 25px;
     /* TODO */
   }
   
   input {
+    width: 400px;
+  height: 40px;
      /* TODO */
+  }
+
+  .footer {
+    display: flex;
+    position: fixed;
+    top: 95%;
+    opacity: 50%;
   }

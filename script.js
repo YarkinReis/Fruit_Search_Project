@@ -14,9 +14,9 @@ function search(str) {
 
 function searchHandler(e) {
 	// TODO
-    const inputVal = input.value;
+    const inputVal = input.value.toLowerCase();
     const results = search(inputVal);
-
+    showSuggestions(results,inputVal);
 
 }
 
@@ -26,11 +26,14 @@ function showSuggestions(results, inputVal) {
         const li = document.createElement('li');
         li.textContent = element;
         suggestions.appendChild(li);
+        li.addEventListener('click',useSuggestion);
     });
 	// TODO
 }
 
 function useSuggestion(e) {
+    input.value = e.target.textContent;
+    suggestions.innerHTML='';
 	// TODO
 }
 
