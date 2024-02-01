@@ -5,7 +5,8 @@ const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackb
 
 function search(str) {
 	let results = [];
-
+    
+	results = fruit.filter(item => item.toLowerCase().includes(str.toLowerCase()));
 	// TODO
 
 	return results;
@@ -13,10 +14,19 @@ function search(str) {
 
 function searchHandler(e) {
 	// TODO
+    const inputVal = input.value;
+    const results = search(inputVal);
+
+
 }
 
 function showSuggestions(results, inputVal) {
-
+    suggestions.innerHTML = '';
+    results.forEach(element => {
+        const li = document.createElement('li');
+        li.textContent = element;
+        suggestions.appendChild(li);
+    });
 	// TODO
 }
 
